@@ -45,7 +45,7 @@ const Home: React.FC = () => {
       {/* Feature Teasers */}
       <section className="w-full max-w-[1200px] px-6 pb-20 grid grid-cols-1 md:grid-cols-3 gap-8">
         {[
-          { icon: 'content_cut', title: 'Hair & Grooming', desc: 'Precision cuts, braiding, and styling for men and women.' },
+          { icon: 'content_cut', title: 'Hair Cut and Grooming', desc: 'Precision cuts, braiding, and styling for men and women.' },
           { icon: 'spa', title: 'Manicure & Pedicure', desc: 'Fingernail care and feet/toenail treatments for everyone.' },
           { icon: 'brush', title: 'Tattooing', desc: 'Professional tattoo artistry and custom designs.' }
         ].map((feature, idx) => (
