@@ -14,7 +14,7 @@ const Services: React.FC = () => {
   };
 
   const categoryImages: Record<string, string> = {
-    'Hair & Grooming': '/images/hair%202.jpg',
+    'Hair Cut and Grooming': '/images/hair%202.jpg',
     'Manicure': 'https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1974&auto=format&fit=crop',
     'Pedicure': 'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=2070&auto=format&fit=crop',
     'Tattooing': 'https://images.unsplash.com/photo-1569516449772-20702452ee28?q=80&w=2070&auto=format&fit=crop',
