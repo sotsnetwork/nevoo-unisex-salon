@@ -6,8 +6,6 @@ import { useNavigate } from 'react-router-dom';
 const Services: React.FC = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [sortBy, setSortBy] = useState<'popularity' | 'priceLow' | 'priceHigh'>('popularity');
-  const [priceFilter, setPriceFilter] = useState<'all' | 'under100' | '100to150' | 'over150'>('all');
 
   const categories = useMemo(() => Array.from(new Set(SERVICES.map(s => s.category))), []);
 
@@ -25,25 +23,10 @@ const Services: React.FC = () => {
   const processedServices = useMemo(() => {
     if (!selectedCategory) return [];
 
-    let filtered = SERVICES.filter(s => s.category === selectedCategory);
+    const filtered = SERVICES.filter(s => s.category === selectedCategory);
 
-    // Apply Price Filter
-    if (priceFilter === 'under100') {
-      filtered = filtered.filter(s => s.priceValue < 100);
-    } else if (priceFilter === '100to150') {
-      filtered = filtered.filter(s => s.priceValue >= 100 && s.priceValue <= 150);
-    } else if (priceFilter === 'over150') {
-      filtered = filtered.filter(s => s.priceValue > 150);
-    }
-
-    // Apply Sorting
-    return [...filtered].sort((a, b) => {
-      if (sortBy === 'popularity') return b.popularity - a.popularity;
-      if (sortBy === 'priceLow') return a.priceValue - b.priceValue;
-      if (sortBy === 'priceHigh') return b.priceValue - a.priceValue;
-      return 0;
-    });
-  }, [selectedCategory, sortBy, priceFilter]);
+    return [...filtered].sort((a, b) => b.popularity - a.popularity);
+  }, [selectedCategory]);
 
   if (!selectedCategory) {
     return (
@@ -98,52 +81,6 @@ const Services: React.FC = () => {
         <div className="h-1 w-20 bg-primary mb-8"></div>
       </div>
 
-      {/* Filter and Sort Bar */}
-      <div className="flex flex-col md:flex-row gap-6 mb-12 pb-8 border-b border-white/5">
-        <div className="flex flex-col gap-2 flex-grow">
-          <label className="text-[10px] font-bold uppercase tracking-widest text-primary">Sort By</label>
-          <div className="flex flex-wrap gap-2">
-            {[
-              { id: 'popularity', label: 'Popularity' },
-              { id: 'priceLow', label: 'Price: Low-High' },
-              { id: 'priceHigh', label: 'Price: High-Low' }
-            ].map(option => (
-              <button
-                key={option.id}
-                onClick={() => setSortBy(option.id as any)}
-                className={`px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all border ${
-                  sortBy === option.id ? 'bg-primary border-primary text-white' : 'bg-transparent border-white/10 text-white/40 hover:border-white/30'
-                }`}
-              >
-                {option.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <label className="text-[10px] font-bold uppercase tracking-widest text-primary">Price Range</label>
-          <div className="flex flex-wrap gap-2">
-            {[
-              { id: 'all', label: 'All' },
-              { id: 'under100', label: '< $100' },
-              { id: '100to150', label: '$100-$150' },
-              { id: 'over150', label: '> $150' }
-            ].map(option => (
-              <button
-                key={option.id}
-                onClick={() => setPriceFilter(option.id as any)}
-                className={`px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all border ${
-                  priceFilter === option.id ? 'bg-white border-white text-background-dark' : 'bg-transparent border-white/10 text-white/40 hover:border-white/30'
-                }`}
-              >
-                {option.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
       <div className="space-y-6">
         {processedServices.length > 0 ? (
           processedServices.map(service => (
@@ -166,7 +103,6 @@ const Services: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-center justify-between md:justify-end md:items-center gap-6">
-                <span className="font-serif font-black text-xl text-white/90 whitespace-nowrap">{service.price}</span>
                 <button 
                   onClick={() => handleServiceSelect(service.id)}
                   className="bg-primary text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-lg"
@@ -179,12 +115,12 @@ const Services: React.FC = () => {
         ) : (
           <div className="py-20 text-center flex flex-col items-center gap-4">
             <span className="material-symbols-outlined text-5xl text-white/10">search_off</span>
-            <p className="text-white/30 font-serif italic text-lg">No services matching your criteria in this category.</p>
+            <p className="text-white/30 font-serif italic text-lg">No services in this category.</p>
             <button 
-              onClick={() => {setPriceFilter('all'); setSortBy('popularity');}}
+              onClick={() => setSelectedCategory(null)}
               className="text-primary text-xs font-bold uppercase tracking-widest hover:underline"
             >
-              Reset Filters
+              Back to Categories
             </button>
           </div>
         )}
