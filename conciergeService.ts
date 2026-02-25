@@ -2,7 +2,7 @@ import { ChatMessage } from './types';
 
 const SALON_INFO = `NEVOO is a premium unisex salon in Kano, Nigeria.
 Services include:
-- Hair & Grooming: Cuts, braiding, styling ($85–$200+)
+- Hair Cut and Grooming: Cuts, braiding, styling ($85–$200+)
 - Manicure & Pedicure ($65–$90+)
 - Tattooing (from $150+)`;
 
