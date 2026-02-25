@@ -102,7 +102,7 @@ const ServiceDetails: React.FC = () => {
 
   const handleProceedToWhatsApp = () => {
     const message = encodeURIComponent(
-      `Hello NEVOO Concierge,\n\nI would like to book the "${service.name}" service (${service.price}).\n\nPlease let me know your available slots for this week.\n\nThank you.\n(Ref: ${service.id})`
+      `Hello NEVOO Concierge,\n\nI would like to book the "${service.name}" service.\n\nPlease let me know your available slots and pricing for this week.\n\nThank you.\n(Ref: ${service.id})`
     );
     window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${message}`, '_blank');
     navigate('/booking-success');
@@ -174,11 +174,7 @@ const ServiceDetails: React.FC = () => {
             <p>
               Experience the pinnacle of grooming at NEVOO. Our {service.name.toLowerCase()} service is meticulously designed to cater to your specific aesthetic goals while providing a moment of pure relaxation.
             </p>
-            <div className="grid grid-cols-2 gap-8 pt-6 border-t border-white/10">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">Investment</p>
-                <p className="text-3xl font-black font-display text-white">{service.price}</p>
-              </div>
+            <div className="pt-6 border-t border-white/10">
               <div>
                 <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">Duration</p>
                 <p className="text-3xl font-black font-display text-white">45-90 min</p>
@@ -386,7 +382,6 @@ const ServiceDetails: React.FC = () => {
                   <h3 className="font-bold text-xl mb-1 group-hover:text-primary transition-colors">{related.name}</h3>
                   <p className="text-white/40 text-sm line-clamp-2 mb-4">{related.description}</p>
                   <div className="flex items-center justify-between mt-auto">
-                    <span className="font-serif font-bold text-white/80">{related.price}</span>
                     <span className="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all translate-x-4 group-hover:translate-x-0">
                       arrow_forward
                     </span>
@@ -410,7 +405,7 @@ const ServiceDetails: React.FC = () => {
                 <h3 className="text-3xl font-black font-display uppercase tracking-tighter">
                   {isSubmitted ? 'See You Soon' : 'Your Appointment'}
                 </h3>
-                <p className="text-white/40 text-sm font-medium italic">{service.name} • {service.price}</p>
+                <p className="text-white/40 text-sm font-medium italic">{service.name}</p>
               </div>
               <button 
                 onClick={() => setIsModalOpen(false)}
