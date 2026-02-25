@@ -4,8 +4,8 @@ export interface Service {
   name: string;
   category: string;
   description: string;
-  price: string;
-  priceValue: number;
+  price?: string;
+  priceValue?: number;
   popularity: number;
   icon: string;
   image?: string;
