@@ -35,14 +35,14 @@ export const SERVICES: Service[] = [
     id: 's3b',
     name: 'Hair Braiding',
     category: 'Hair Cut and Grooming',
-    description: 'Expert braiding for all hair types. Styles for men and women.',
+    description: 'Hair braiding for both male and female clients. Expert braiding for all hair types.',
     popularity: 90,
     icon: 'waves',
   },
   {
     id: 's4',
     name: 'Sculpted Manicure',
-    category: 'Manicure',
+    category: 'Manicure and Pedicure',
     description: 'Minimalist nail architecture and care for fingernails. For men and women.',
     popularity: 75,
     icon: 'spa',
@@ -51,7 +51,7 @@ export const SERVICES: Service[] = [
   {
     id: 's5',
     name: 'Luxury Pedicure',
-    category: 'Pedicure',
+    category: 'Manicure and Pedicure',
     description: 'Feet and toenail care. Deep hydration and relaxation therapy. For men and women.',
     popularity: 82,
     icon: 'footprint',
@@ -94,7 +94,7 @@ export const GALLERY: GalleryItem[] = [
     id: 'g4',
     title: 'Minimalist Nails',
     description: 'Sleek, sophisticated nail art.',
-    category: 'Nails',
+    category: 'Manicure and Pedicure',
     imageUrl: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=2070&auto=format&fit=crop'
   },
   {
