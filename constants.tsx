@@ -9,7 +9,7 @@ export const SERVICES: Service[] = [
   {
     id: 's1',
     name: 'Classic Plaiting',
-    category: 'Hair Cut and Grooming',
+    category: 'UNISEX HAIRCUT, BRAIDING & STYLING',
     description: 'Intricate patterns and styles crafted with precision. Hair braiding for all.',
     popularity: 88,
     icon: 'waves',
@@ -18,7 +18,7 @@ export const SERVICES: Service[] = [
   {
     id: 's2',
     name: 'Signature Dreadlocks',
-    category: 'Hair Cut and Grooming',
+    category: 'UNISEX HAIRCUT, BRAIDING & STYLING',
     description: 'Maintenance and restoration for a timeless look.',
     popularity: 92,
     icon: 'texture',
@@ -26,7 +26,7 @@ export const SERVICES: Service[] = [
   {
     id: 's3',
     name: 'The Gentleman\'s Cut',
-    category: 'Hair Cut and Grooming',
+    category: 'UNISEX HAIRCUT, BRAIDING & STYLING',
     description: 'Precision fade with hot towel finish. Styling for men and women.',
     popularity: 98,
     icon: 'content_cut',
@@ -34,7 +34,7 @@ export const SERVICES: Service[] = [
   {
     id: 's3b',
     name: 'Hair Braiding',
-    category: 'Hair Cut and Grooming',
+    category: 'UNISEX HAIRCUT, BRAIDING & STYLING',
     description: 'Hair braiding for both male and female clients. Expert braiding for all hair types.',
     popularity: 90,
     icon: 'waves',
@@ -73,21 +73,21 @@ export const GALLERY: GalleryItem[] = [
     id: 'g1',
     title: 'Braids & Precision Fade',
     description: 'Sharp braided style with clean fade and beard grooming.',
-    category: 'Hair Cut and Grooming',
+    category: 'UNISEX HAIRCUT, BRAIDING & STYLING',
     imageUrl: '/images/hair%203.jpg'
   },
   {
     id: 'g2',
     title: '360 Waves & Beard Design',
     description: 'Defined waves with geometric design and meticulous beard sculpting.',
-    category: 'Hair Cut and Grooming',
+    category: 'UNISEX HAIRCUT, BRAIDING & STYLING',
     imageUrl: '/images/hair%204.jpeg'
   },
   {
     id: 'g3',
     title: 'Natural Curls & Low Fade',
     description: 'Tight coils with a clean low fade and crisp line-up.',
-    category: 'Hair Cut and Grooming',
+    category: 'UNISEX HAIRCUT, BRAIDING & STYLING',
     imageUrl: '/images/hair%20one.jpg'
   },
   {
