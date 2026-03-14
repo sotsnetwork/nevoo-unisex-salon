@@ -1,22 +1,28 @@
-
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { SERVICES, WHATSAPP_URL } from '../constants';
 import { useNavigate } from 'react-router-dom';
+
+const HAIR_CUT_SLIDESHOW = ['/images/hair%204.jpeg', '/images/hair%205.jpeg', '/images/BRAIDING%201.jpeg'];
 
 const Services: React.FC = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [slideIndex, setSlideIndex] = useState(0);
 
   const categories = useMemo(() => Array.from(new Set(SERVICES.map(s => s.category))), []);
+
+  useEffect(() => {
+    const interval = setInterval(() => setSlideIndex(i => (i + 1) % HAIR_CUT_SLIDESHOW.length), 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleServiceSelect = (serviceId: string) => {
     navigate(`/services/${serviceId}`);
   };
 
   const categoryImages: Record<string, string> = {
-    'Hair Cut and Grooming': '/images/hair%202.jpg',
     'Manicure and Pedicure': 'https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1974&auto=format&fit=crop',
-    'Tattooing': 'https://images.unsplash.com/photo-1569516449772-20702452ee28?q=80&w=2070&auto=format&fit=crop',
+    'Tattooing': '/images/tattoo%203.jpeg',
   };
 
   const processedServices = useMemo(() => {
@@ -43,10 +49,24 @@ const Services: React.FC = () => {
               onClick={() => setSelectedCategory(cat)}
               className="group relative h-[400px] overflow-hidden rounded-3xl border border-white/10 transition-all hover:border-primary/50"
             >
-              <div 
-                className="absolute inset-0 bg-cover bg-center bw-filter transition-transform duration-700 group-hover:scale-110"
-                style={{ backgroundImage: `url("${categoryImages[cat] || 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop'}")` }}
-              />
+              {cat === 'Hair Cut and Grooming' ? (
+                <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
+                  {HAIR_CUT_SLIDESHOW.map((img, i) => (
+                    <div
+                      key={img}
+                      className={`absolute inset-0 bg-cover bg-center bw-filter transition-opacity duration-700 ${
+                        i === slideIndex ? 'opacity-100' : 'opacity-0'
+                      }`}
+                      style={{ backgroundImage: `url("${img}")` }}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bw-filter transition-transform duration-700 group-hover:scale-110"
+                  style={{ backgroundImage: `url("${categoryImages[cat] || 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop'}")` }}
+                />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent flex flex-col justify-end p-8 text-left">
                 <span className="text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Category</span>
                 <h3 className="text-3xl font-black font-display uppercase tracking-tight mb-2 group-hover:text-primary transition-colors">{cat}</h3>
