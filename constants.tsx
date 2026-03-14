@@ -81,7 +81,7 @@ export const GALLERY: GalleryItem[] = [
     title: '360 Waves & Beard Design',
     description: 'Defined waves with geometric design and meticulous beard sculpting.',
     category: 'Hair Cut and Grooming',
-    imageUrl: '/images/hair%202.jpg'
+    imageUrl: '/images/hair%204.jpeg'
   },
   {
     id: 'g3',
