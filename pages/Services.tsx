@@ -21,7 +21,7 @@ const Services: React.FC = () => {
   };
 
   const categoryImages: Record<string, string> = {
-    'Manicure and Pedicure': 'https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1974&auto=format&fit=crop',
+    'Manicure and Pedicure': '/images/nails%201.jpeg',
     'Tattooing': '/images/tattoo%203.jpeg',
   };
 
@@ -49,7 +49,7 @@ const Services: React.FC = () => {
               onClick={() => setSelectedCategory(cat)}
               className="group relative h-[400px] overflow-hidden rounded-3xl border border-white/10 transition-all hover:border-primary/50"
             >
-              {cat === 'Hair Cut and Grooming' ? (
+              {cat === 'UNISEX HAIRCUT, BRAIDING & STYLING' ? (
                 <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
                   {HAIR_CUT_SLIDESHOW.map((img, i) => (
                     <div
