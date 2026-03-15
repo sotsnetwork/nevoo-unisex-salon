@@ -6,7 +6,7 @@ import { ChatMessage } from '../types';
 const GeminiConcierge: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', text: "Welcome to NEVOO. I am your concierge. How can I help you choose a look or service today?" }
+    { role: 'model', text: "Welcome to NEVO. I am your concierge. How can I help you choose a look or service today?" }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -49,7 +49,7 @@ const GeminiConcierge: React.FC = () => {
           <div className="p-4 bg-primary flex items-center justify-between">
             <div className="flex items-center gap-3">
               <span className="material-symbols-outlined">smart_toy</span>
-              <span className="font-bold text-sm uppercase tracking-widest">NEVOO Concierge</span>
+              <span className="font-bold text-sm uppercase tracking-widest">NEVO Concierge</span>
             </div>
             <button onClick={() => setIsOpen(false)} className="text-white hover:opacity-70">
               <span className="material-symbols-outlined">close</span>
@@ -71,7 +71,7 @@ const GeminiConcierge: React.FC = () => {
             {isLoading && (
               <div className="flex justify-start">
                 <div className="bg-white/5 p-3 rounded-xl text-xs text-white/40 animate-pulse">
-                  NEVOO is thinking...
+                  NEVO is thinking...
                 </div>
               </div>
             )}
