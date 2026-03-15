@@ -23,7 +23,7 @@ const About: React.FC = () => {
           
           <div className="space-y-6 text-white/70 text-lg leading-relaxed font-sans">
             <p>
-              NEVOO is more than a salon; it is a sanctuary of style. Born from a vision of premium unisex grooming, we blend timeless black-and-white aesthetics with contemporary techniques to redefine your personal brand.
+              NEVO is more than a salon; it is a sanctuary of style. Born from a vision of premium unisex grooming, we blend timeless black-and-white aesthetics with contemporary techniques to redefine your personal brand.
             </p>
             <p>
               Located in the heart of Kano State, we cater to the modern individual who values precision, luxury, and an unparalleled service experience.
