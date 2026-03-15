@@ -1,4 +1,4 @@
-# NEVOO Unisex Salon
+# NEVO Unisex Salon
 
 A premium unisex salon experience SPA with a luxury aesthetic, featuring service listings, a gallery, and a built-in concierge.
 
