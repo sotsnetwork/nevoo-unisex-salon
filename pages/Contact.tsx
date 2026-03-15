@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
         <div className="flex flex-col gap-12">
           <div className="flex flex-col gap-4">
             <span className="text-primary font-bold tracking-[0.3em] text-xs uppercase">Our Location</span>
-            <h1 className="text-5xl md:text-7xl font-black font-display uppercase tracking-tighter">Visit NEVOO</h1>
+            <h1 className="text-5xl md:text-7xl font-black font-display uppercase tracking-tighter">Visit NEVO</h1>
           </div>
 
           <div className="space-y-8">
