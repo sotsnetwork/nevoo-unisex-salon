@@ -38,7 +38,7 @@ const Services: React.FC = () => {
       <div className="max-w-[1200px] mx-auto px-6 py-10 md:py-20 animate-fade-in flex flex-col items-center">
         <div className="text-center max-w-2xl mb-16">
           <span className="text-primary font-bold tracking-[0.3em] text-xs uppercase mb-4 block">Step 1: Choose Experience</span>
-          <h1 className="text-4xl md:text-7xl font-black font-display uppercase tracking-tighter mb-4">The NEVOO Menu</h1>
+          <h1 className="text-4xl md:text-7xl font-black font-display uppercase tracking-tighter mb-4">The NEVO Menu</h1>
           <p className="text-white/50 text-lg">Hair & grooming, braiding, manicure & pedicure, tattooing, and styling for men and women. Select a category to explore our unisex salon services.</p>
         </div>
 
