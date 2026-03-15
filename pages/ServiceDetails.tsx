@@ -36,7 +36,7 @@ const ServiceDetails: React.FC = () => {
       rating: 5,
       date: "2024-05-18",
       displayDate: "2 days ago",
-      comment: "Absolutely the best service I've had in Kano. The attention to detail is unmatched. NEVOO truly understands luxury grooming for the modern gentleman.",
+      comment: "Absolutely the best service I've had in Kano. The attention to detail is unmatched. NEVO truly understands luxury grooming for the modern gentleman.",
       avatar: "https://i.pravatar.cc/150?u=chidi",
       verified: true
     },
@@ -102,7 +102,7 @@ const ServiceDetails: React.FC = () => {
 
   const handleProceedToWhatsApp = () => {
     const message = encodeURIComponent(
-      `Hello NEVOO Concierge,\n\nI would like to book the "${service.name}" service.\n\nPlease let me know your available slots and pricing for this week.\n\nThank you.\n(Ref: ${service.id})`
+      `Hello NEVO Concierge,\n\nI would like to book the "${service.name}" service.\n\nPlease let me know your available slots and pricing for this week.\n\nThank you.\n(Ref: ${service.id})`
     );
     window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${message}`, '_blank');
     navigate('/booking-success');
@@ -154,7 +154,7 @@ const ServiceDetails: React.FC = () => {
             </div>
             <div>
                <p className="text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-1">Signature Choice</p>
-               <p className="text-white text-lg font-bold font-serif italic">NEVOO Craftsmanship</p>
+               <p className="text-white text-lg font-bold font-serif italic">NEVO Craftsmanship</p>
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@ const ServiceDetails: React.FC = () => {
           <div className="space-y-6 text-white/60 text-lg leading-relaxed">
             <p className="font-medium text-white/80">{service.description}</p>
             <p>
-              Experience the pinnacle of grooming at NEVOO. Our {service.name.toLowerCase()} service is meticulously designed to cater to your specific aesthetic goals while providing a moment of pure relaxation.
+              Experience the pinnacle of grooming at NEVO. Our {service.name.toLowerCase()} service is meticulously designed to cater to your specific aesthetic goals while providing a moment of pure relaxation.
             </p>
             <div className="pt-6 border-t border-white/10">
               <div>
@@ -263,7 +263,7 @@ const ServiceDetails: React.FC = () => {
             </div>
 
             <div className="p-8 rounded-3xl bg-primary/5 border border-white/10">
-              <h4 className="text-sm font-bold uppercase tracking-widest text-primary mb-2">The NEVOO Standard</h4>
+              <h4 className="text-sm font-bold uppercase tracking-widest text-primary mb-2">The NEVO Standard</h4>
               <p className="text-xs text-white/50 leading-relaxed italic">
                 "We believe every visit should be a masterpiece. Our reviews reflect our commitment to precision and the art of modern grooming."
               </p>
@@ -422,7 +422,7 @@ const ServiceDetails: React.FC = () => {
                 </div>
                 <h4 className="text-xl font-bold mb-4 font-serif">Request successfully received.</h4>
                 <p className="text-white/50 text-sm mb-10 leading-relaxed">
-                  Your interest in NEVOO is appreciated. We've queued your request. To finalize details and secure your time slot, please proceed to our official WhatsApp channel.
+                  Your interest in NEVO is appreciated. We've queued your request. To finalize details and secure your time slot, please proceed to our official WhatsApp channel.
                 </p>
                 <button 
                   onClick={handleProceedToWhatsApp}
