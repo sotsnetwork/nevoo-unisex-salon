@@ -29,15 +29,10 @@ const Gallery: React.FC = () => {
       <div className="mt-20 w-full bg-primary/5 border border-white/10 rounded-3xl p-12 text-center flex flex-col items-center gap-8">
         <h2 className="text-3xl md:text-5xl font-black font-display uppercase">Ready to elevate your style?</h2>
         <p className="text-white/60 max-w-2xl">Connect with our stylists instantly via WhatsApp for effortless booking and personalized consultations.</p>
-        <div className="flex gap-4">
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="bg-primary px-8 py-4 rounded-xl font-bold hover:scale-105 transition-all shadow-lg flex items-center gap-3">
+        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="bg-primary px-8 py-4 rounded-xl font-bold hover:scale-105 transition-all shadow-lg flex items-center gap-3">
             <span className="material-symbols-outlined">chat</span>
             Book on WhatsApp
           </a>
-          <button className="bg-transparent border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-all">
-            View Price List
-          </button>
-        </div>
       </div>
     </div>
   );
