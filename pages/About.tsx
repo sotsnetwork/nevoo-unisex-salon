@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   return (
@@ -7,8 +8,8 @@ const About: React.FC = () => {
       <div className="flex flex-col lg:flex-row gap-16 items-center">
         <div className="w-full lg:w-1/2 aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative">
           <img 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeCtE_kNrUrwdsRZkd945Z6sMu031mgALOh5ZZFJz3jjut8gEhH-bkX8RJDNVgGgk7VAINKAgwZBVAVK_5SyqMSW-54XQj8-y_98ekRCwZ3UWT0kPjSQdhL4OjLN6yYv8LkrWfMdCYETW4sIlsqcZ4f_9UCQV86dowcrEy3HhSEu9Yq7mCCIBV0edN8sZOf1nv3c2PEVKUgdV5quU8dP6FpW9DSJlOo3jUlKnGhb4N7l9aNa4r7sHCNqjrvpJKTZHIdF6m-22n4yLr" 
-            alt="Salon Story" 
+            src="/images/shop.webp" 
+            alt="NEVO Salon" 
             className="w-full h-full object-cover bw-filter"
           />
         </div>
@@ -30,14 +31,12 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex gap-4">
-            <button className="bg-primary text-white px-8 py-4 rounded-xl font-bold uppercase text-sm tracking-widest hover:opacity-90">
-              Our Vision
-            </button>
-            <button className="border border-primary text-primary px-8 py-4 rounded-xl font-bold uppercase text-sm tracking-widest hover:bg-primary/5">
-              Contact Us
-            </button>
-          </div>
+          <Link 
+            to="/contact" 
+            className="inline-flex border border-primary text-primary px-8 py-4 rounded-xl font-bold uppercase text-sm tracking-widest hover:bg-primary/5 transition-all"
+          >
+            Contact Us
+          </Link>
         </div>
       </div>
 
