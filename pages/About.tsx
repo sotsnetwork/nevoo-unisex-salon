@@ -10,7 +10,7 @@ const About: React.FC = () => {
           <img 
             src="/images/shop.webp" 
             alt="NEVO Salon" 
-            className="w-full h-full object-cover bw-filter"
+            className="w-full h-full object-cover"
           />
         </div>
         
