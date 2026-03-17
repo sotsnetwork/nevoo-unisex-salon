@@ -15,7 +15,7 @@ const Gallery: React.FC = () => {
             <img 
               src={item.imageUrl} 
               alt={item.title}
-              className="w-full h-full object-cover bw-filter"
+              className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
               <span className="text-primary text-[10px] uppercase font-bold tracking-[0.3em] mb-2">{item.category}</span>
