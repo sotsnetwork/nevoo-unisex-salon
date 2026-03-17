@@ -13,7 +13,7 @@ export const SERVICES: Service[] = [
     description: 'Intricate patterns and styles crafted with precision. Hair braiding for all.',
     popularity: 88,
     icon: 'waves',
-    image: '/images/hair%203.jpg'
+    image: '/images/BRAIDING%204.jpeg'
   },
   {
     id: 's2',
@@ -22,6 +22,7 @@ export const SERVICES: Service[] = [
     description: 'Maintenance and restoration for a timeless look.',
     popularity: 92,
     icon: 'texture',
+    image: '/images/BRAIDING%203.png'
   },
   {
     id: 's3',
@@ -30,6 +31,7 @@ export const SERVICES: Service[] = [
     description: 'Precision fade with hot towel finish. Styling for men and women.',
     popularity: 98,
     icon: 'content_cut',
+    image: '/images/hair%204.jpeg'
   },
   {
     id: 's3b',
@@ -38,6 +40,7 @@ export const SERVICES: Service[] = [
     description: 'Hair braiding for both male and female clients. Expert braiding for all hair types.',
     popularity: 90,
     icon: 'waves',
+    image: '/images/BRAIDING%201.jpeg'
   },
   {
     id: 's4',
@@ -46,7 +49,7 @@ export const SERVICES: Service[] = [
     description: 'Minimalist nail architecture and care for fingernails. For men and women.',
     popularity: 75,
     icon: 'spa',
-    image: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=2070&auto=format&fit=crop'
+    image: '/images/nails%201.jpeg'
   },
   {
     id: 's5',
@@ -55,7 +58,7 @@ export const SERVICES: Service[] = [
     description: 'Feet and toenail care. Deep hydration and relaxation therapy. For men and women.',
     popularity: 82,
     icon: 'footprint',
-    image: 'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=2070&auto=format&fit=crop'
+    image: '/images/nails%202.jpeg'
   },
   {
     id: 's6',
@@ -64,7 +67,7 @@ export const SERVICES: Service[] = [
     description: 'Professional tattoo artistry. Consultations and custom designs for men and women.',
     popularity: 85,
     icon: 'brush',
-    image: 'https://images.unsplash.com/photo-1569516449772-20702452ee28?q=80&w=2070&auto=format&fit=crop'
+    image: '/images/tattoo%201.jpeg'
   }
 ];
 
