@@ -54,7 +54,7 @@ const Services: React.FC = () => {
                   {HAIR_CUT_SLIDESHOW.map((img, i) => (
                     <div
                       key={img}
-                      className={`absolute inset-0 bg-cover bg-center bw-filter transition-opacity duration-700 ${
+                      className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ${
                         i === slideIndex ? 'opacity-100' : 'opacity-0'
                       }`}
                       style={{ backgroundImage: `url("${img}")` }}
@@ -63,8 +63,8 @@ const Services: React.FC = () => {
                 </div>
               ) : (
                 <div 
-                  className="absolute inset-0 bg-cover bg-center bw-filter transition-transform duration-700 group-hover:scale-110"
-                  style={{ backgroundImage: `url("${categoryImages[cat] || 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop'}")` }}
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                  style={{ backgroundImage: `url("${categoryImages[cat] || '/images/shop.webp'}")` }}
                 />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent flex flex-col justify-end p-8 text-left">
