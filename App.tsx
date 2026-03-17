@@ -106,7 +106,6 @@ const Footer: React.FC = () => (
         <div className="flex flex-col gap-2 text-sm text-white/60">
           <Link to="/services" className="hover:text-primary transition-colors">Our Services</Link>
           <Link to="/gallery" className="hover:text-primary transition-colors">Style Portfolio</Link>
-          <Link to="/about" className="hover:text-primary transition-colors">Our Story</Link>
           <Link to="/contact" className="hover:text-primary transition-colors">Visit Us</Link>
         </div>
       </div>
