@@ -7,16 +7,8 @@ const ServiceDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const service = SERVICES.find(s => s.id === id);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [reviewSort, setReviewSort] = useState<'recent' | 'highest'>('recent');
   const [showStickyBar, setShowStickyBar] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    date: '',
-    time: ''
-  });
 
   // Salon contact info - uses shared constant 
 
@@ -134,9 +126,9 @@ const ServiceDetails: React.FC = () => {
         {/* Visual Component */}
         <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-white/5 group">
           <img 
-            src={service.image || "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop"} 
+            src={service.image || "/images/shop.webp"} 
             alt={service.name}
-            className="w-full h-full object-cover bw-filter transition-transform duration-1000 group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-60"></div>
           
@@ -174,12 +166,6 @@ const ServiceDetails: React.FC = () => {
             <p>
               Experience the pinnacle of grooming at NEVO. Our {service.name.toLowerCase()} service is meticulously designed to cater to your specific aesthetic goals while providing a moment of pure relaxation.
             </p>
-            <div className="pt-6 border-t border-white/10">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">Duration</p>
-                <p className="text-3xl font-black font-display text-white">45-90 min</p>
-              </div>
-            </div>
           </div>
 
           {/* New WhatsApp Integration Area */}
@@ -191,7 +177,7 @@ const ServiceDetails: React.FC = () => {
             <div className="relative z-10">
               <h3 className="text-white text-2xl font-black font-display uppercase tracking-tight mb-2">Instant Concierge</h3>
               <p className="text-white/50 text-sm leading-relaxed mb-8 max-w-xs">
-                The fastest way to secure your appointment. Our stylists are online and ready to assist you now.
+                The fastest way to secure your appointment. {service.category === 'Manicure and Pedicure' ? 'Our Nail Technicians' : service.category === 'Tattooing' ? 'Our tattoo artists' : 'Our stylists'} are online and ready to assist you now.
               </p>
               
               <button 
@@ -203,26 +189,8 @@ const ServiceDetails: React.FC = () => {
               </button>
             </div>
           </div>
-          
-          <button 
-            onClick={() => {
-              setIsModalOpen(true);
-              setIsSubmitted(false);
-            }}
-            className="w-full h-14 border border-white/10 text-white/40 font-bold uppercase tracking-widest text-[10px] rounded-2xl flex items-center justify-center gap-3 hover:text-white hover:bg-white/5 transition-all"
-          >
-            Request via Online Form instead
-            <span className="material-symbols-outlined text-sm">assignment</span>
-          </button>
 
-          <div className="p-8 rounded-2xl bg-white/5 border border-white/5 flex items-center gap-6">
-            <div className="flex -space-x-3">
-              {[1, 2, 3].map(i => (
-                <div key={i} className="w-10 h-10 rounded-full border-2 border-background-dark bg-slate-800 overflow-hidden">
-                  <img src={`https://i.pravatar.cc/100?u=${i + service.id}`} alt="client" className="w-full h-full object-cover grayscale" />
-                </div>
-              ))}
-            </div>
+          <div className="p-8 rounded-2xl bg-white/5 border border-white/5">
             <p className="text-xs text-white/50 leading-snug">
               Join <span className="text-white font-bold">120+ clients</span> who recently experienced our {service.name.toLowerCase()} this month.
             </p>
@@ -298,14 +266,6 @@ const ServiceDetails: React.FC = () => {
                 <div key={review.id} className="group flex flex-col gap-6 animate-fade-in">
                   <div className="flex justify-between items-start">
                     <div className="flex items-center gap-5">
-                      <div className="relative">
-                        <img src={review.avatar} alt={review.user} className="w-14 h-14 rounded-full grayscale border border-white/10 group-hover:grayscale-0 transition-all duration-500" />
-                        {review.verified && (
-                          <div className="absolute -bottom-1 -right-1 bg-accent text-background-dark p-0.5 rounded-full border-2 border-background-dark">
-                            <span className="material-symbols-outlined text-[10px] font-bold">verified</span>
-                          </div>
-                        )}
-                      </div>
                       <div>
                         <div className="flex items-center gap-3">
                           <h4 className="font-bold text-base">{review.user}</h4>
@@ -370,9 +330,9 @@ const ServiceDetails: React.FC = () => {
               >
                 <div className="aspect-video w-full rounded-2xl overflow-hidden relative">
                   <img 
-                    src={related.image || "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop"} 
+                    src={related.image || "/images/shop.webp"} 
                     alt={related.name}
-                    className="w-full h-full object-cover bw-filter group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute top-4 left-4 p-2 rounded-lg bg-background-dark/80 backdrop-blur-md border border-white/10 text-primary">
                     <span className="material-symbols-outlined text-sm">{related.icon}</span>
@@ -393,112 +353,6 @@ const ServiceDetails: React.FC = () => {
         </div>
       )}
 
-      {/* Booking Modal Overlay */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center px-4 bg-background-dark/95 backdrop-blur-lg animate-fade-in">
-          <div className="w-full max-w-lg bg-background-dark border border-white/10 rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col">
-            <div className="p-10 border-b border-white/5 flex justify-between items-start">
-              <div className="flex flex-col gap-2">
-                <span className="text-primary font-bold tracking-[0.3em] text-[10px] uppercase">
-                  {isSubmitted ? 'Request Sent' : 'Finalize Request'}
-                </span>
-                <h3 className="text-3xl font-black font-display uppercase tracking-tighter">
-                  {isSubmitted ? 'See You Soon' : 'Your Appointment'}
-                </h3>
-                <p className="text-white/40 text-sm font-medium italic">{service.name}</p>
-              </div>
-              <button 
-                onClick={() => setIsModalOpen(false)}
-                className="p-2 rounded-full hover:bg-white/5 transition-colors text-white/40 hover:text-white"
-              >
-                <span className="material-symbols-outlined">close</span>
-              </button>
-            </div>
-
-            {isSubmitted ? (
-              <div className="p-10 flex flex-col items-center text-center animate-fade-in">
-                <div className="w-20 h-20 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center mb-8">
-                  <span className="material-symbols-outlined text-4xl text-primary animate-pulse">done_all</span>
-                </div>
-                <h4 className="text-xl font-bold mb-4 font-serif">Request successfully received.</h4>
-                <p className="text-white/50 text-sm mb-10 leading-relaxed">
-                  Your interest in NEVO is appreciated. We've queued your request. To finalize details and secure your time slot, please proceed to our official WhatsApp channel.
-                </p>
-                <button 
-                  onClick={handleProceedToWhatsApp}
-                  className="w-full h-16 bg-white text-background-dark font-black uppercase tracking-widest text-sm rounded-2xl hover:bg-primary hover:text-white transition-all transform active:scale-95 shadow-xl flex items-center justify-center gap-3"
-                >
-                  Proceed to WhatsApp
-                  <span className="material-symbols-outlined text-sm">open_in_new</span>
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleFormSubmit} className="p-10 space-y-8 animate-fade-in">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[10px] font-bold uppercase tracking-widest text-primary">Full Name</label>
-                    <input 
-                      required
-                      type="text" 
-                      placeholder="Enter name..."
-                      className="bg-transparent border-b border-white/10 py-3 text-lg focus:outline-none focus:border-primary transition-colors text-white placeholder:text-white/10"
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[10px] font-bold uppercase tracking-widest text-primary">WhatsApp / Phone</label>
-                    <input 
-                      required
-                      type="tel" 
-                      placeholder="+234..."
-                      className="bg-transparent border-b border-white/10 py-3 text-lg focus:outline-none focus:border-primary transition-colors text-white placeholder:text-white/10"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[10px] font-bold uppercase tracking-widest text-primary">Select Date</label>
-                    <input 
-                      required
-                      type="date" 
-                      className="bg-transparent border-b border-white/10 py-3 text-lg focus:outline-none focus:border-primary transition-colors text-white [color-scheme:dark]"
-                      value={formData.date}
-                      onChange={(e) => setFormData({...formData, date: e.target.value})}
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[10px] font-bold uppercase tracking-widest text-primary">Preferred Time</label>
-                    <input 
-                      required
-                      type="time" 
-                      className="bg-transparent border-b border-white/10 py-3 text-lg focus:outline-none focus:border-primary transition-colors text-white [color-scheme:dark]"
-                      value={formData.time}
-                      onChange={(e) => setFormData({...formData, time: e.target.value})}
-                    />
-                  </div>
-                </div>
-
-                <div className="pt-6">
-                  <button 
-                    type="submit"
-                    className="w-full h-16 bg-white text-background-dark font-black uppercase tracking-widest text-sm rounded-2xl hover:bg-primary hover:text-white transition-all transform active:scale-95 shadow-xl flex items-center justify-center gap-3"
-                  >
-                    Request Booking
-                    <span className="material-symbols-outlined text-sm">send</span>
-                  </button>
-                  <p className="text-center text-[10px] text-white/20 mt-6 uppercase tracking-[0.3em]">
-                    Secure verification via WhatsApp required next
-                  </p>
-                </div>
-              </form>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 };
