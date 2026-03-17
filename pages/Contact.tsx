@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
 
         <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl border border-white/10">
           <div 
-            className="absolute inset-0 grayscale contrast-125 brightness-75 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCO762s7vksMDntaeYVPgCPvPIs16eQaMSeTg3Nbdi5B10CQHgODbqF0RpYW2FJqSDgtf2ezktZ6WUlFkoF2yOAOLMf0JZVVAsccx3lU3GXFLEphC5rx9zvBq2LViNcomOxkN1YosLH-oBx9Jhrm-jX11w1_Gb1EdCtSWAcUYiAaywTA1q7ZhN4iv0gu1OBY9SKTosu8Xx8KR76jG_LHYfWy8PUOFmE-JGH8ToY4lQ1HA1nWpX2XFOJqKHtVQ_UUnpr-CHn5rbzHJsm")' }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent"></div>
