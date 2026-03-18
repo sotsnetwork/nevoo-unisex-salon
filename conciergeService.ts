@@ -1,6 +1,6 @@
 import { ChatMessage } from './types';
 
-const SALON_INFO = `NEVO is a premium unisex salon in Kano, Nigeria.
+const SALON_INFO = `NEVOO is a premium unisex salon in Kano, Nigeria.
 Services include:
 - UNISEX HAIRCUT, BRAIDING & STYLING: Cuts, braiding, styling ($85–$200+)
 - Manicure & Pedicure ($65–$90+)
@@ -18,11 +18,11 @@ const SERVICE_RESPONSES: Record<string, string> = {
   pedicure: "Luxury Pedicures from $90—feet and toenail care with deep hydration and relaxation therapy. Available for all clients.",
   price: "Our services range from $65 (manicures) to $200+ (signature dreadlocks). Most cuts start at $85. I can help you find the right service for your budget.",
   book: "You can book via our Services page or contact us directly on WhatsApp. Would you like me to guide you to our booking options?",
-  location: "NEVO is located at No. 4 Airport Road, by Ahmadiyya Junction, Kano State, Nigeria. We're open Mon–Fri 9AM–8PM, Sat 10AM–9PM, Sun 12PM–6PM.",
+  location: "NEVOO is located at No. 4 Airport Road, by Ahmadiyya Junction, Kano State, Nigeria. We're open Mon–Fri 9AM–8PM, Sat 10AM–9PM, Sun 12PM–6PM.",
   hours: "Mon–Fri: 9AM–8PM | Sat: 10AM–9PM | Sun: 12PM–6PM. Public holidays: Closed.",
-  hello: "Welcome to NEVO. How can I help you choose a look or service today?",
+  hello: "Welcome to NEVOO. How can I help you choose a look or service today?",
   help: "I can help you explore our services, pricing, booking, or location. What would you like to know?",
-  thanks: "You're welcome. Enjoy your visit to NEVO—we look forward to seeing you.",
+  thanks: "You're welcome. Enjoy your visit to NEVOO—we look forward to seeing you.",
 };
 
 function getConciergeResponse(userMessage: string): string {
