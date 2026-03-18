@@ -25,33 +25,39 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-[100] w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md px-6 py-4 flex items-center justify-between">
-      <Link to="/" className="flex items-center gap-3">
-        <img src="/images/nevo%20logo.jpeg" alt="NEVOO" className="h-10 w-auto object-contain" />
-        <h2 className="text-xl font-black tracking-tighter uppercase font-display">NEVOO</h2>
-      </Link>
+    <header className="sticky top-0 z-[100] w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md px-6 py-4">
+      <div className="flex items-center justify-between relative">
+        <Link to="/" className="flex items-center gap-3 flex-shrink-0">
+          <img src="/images/nevo%20logo.jpeg" alt="NEVOO" className="h-10 w-auto object-contain" />
+          <h2 className="text-xl font-black tracking-tighter uppercase font-display">NEVOO</h2>
+        </Link>
 
-      <nav className="hidden md:flex items-center gap-8">
-        {links.map(link => (
-          <Link 
-            key={link.path}
-            to={link.path}
-            className={`text-sm font-semibold transition-colors hover:text-primary ${location.pathname.startsWith(link.path) && link.path !== '/' || (link.path === '/' && location.pathname === '/') ? 'text-primary' : 'text-white/70'}`}
-          >
-            {link.name}
-          </Link>
-        ))}
-        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="bg-primary text-white px-6 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-all">
-          Book Now
-        </a>
-      </nav>
+        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
+          {links.map(link => (
+            <Link 
+              key={link.path}
+              to={link.path}
+              className={`text-sm font-semibold transition-colors hover:text-primary ${location.pathname.startsWith(link.path) && link.path !== '/' || (link.path === '/' && location.pathname === '/') ? 'text-primary' : 'text-white/70'}`}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </nav>
 
-      <button 
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="md:hidden text-white"
-      >
+        <div className="hidden md:flex items-center flex-shrink-0">
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="bg-primary text-white px-6 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-all">
+            Book Now
+          </a>
+        </div>
+
+        <button 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden text-white"
+        >
         <span className="material-symbols-outlined text-3xl">{isMenuOpen ? 'close' : 'menu'}</span>
       </button>
+
+      </div>
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
