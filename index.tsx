@@ -1,5 +1,7 @@
-
+import { inject } from "@vercel/analytics";
 import React from 'react';
+
+inject();
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
