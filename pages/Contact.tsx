@@ -71,10 +71,15 @@ const Contact: React.FC = () => {
           ></div>
           <div className="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent"></div>
           <div className="absolute bottom-8 left-8 right-8">
-            <button className="w-full py-4 bg-primary text-white rounded-xl font-bold flex items-center justify-center gap-3 shadow-2xl hover:scale-105 transition-transform">
+            <a 
+              href="https://maps.apple/p/h5NiU_RLueU0Y.z" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full py-4 bg-primary text-white rounded-xl font-bold flex items-center justify-center gap-3 shadow-2xl hover:scale-105 transition-transform"
+            >
               <span className="material-symbols-outlined">directions</span>
               Get Directions
-            </button>
+            </a>
           </div>
         </div>
       </div>
