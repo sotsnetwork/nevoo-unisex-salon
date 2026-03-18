@@ -27,8 +27,8 @@ const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-[100] w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md px-6 py-4 flex items-center justify-between">
       <Link to="/" className="flex items-center gap-3">
-        <img src="/images/nevo%20logo.jpeg" alt="NEVO" className="h-10 w-auto object-contain" />
-        <h2 className="text-xl font-black tracking-tighter uppercase font-display">NEVO</h2>
+        <img src="/images/nevo%20logo.jpeg" alt="NEVOO" className="h-10 w-auto object-contain" />
+        <h2 className="text-xl font-black tracking-tighter uppercase font-display">NEVOO</h2>
       </Link>
 
       <nav className="hidden md:flex items-center gap-8">
@@ -94,8 +94,8 @@ const Footer: React.FC = () => (
     <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
       <div className="flex flex-col gap-4 items-center md:items-start">
         <div className="flex items-center gap-3">
-          <img src="/images/nevo%20logo.jpeg" alt="NEVO" className="h-10 w-auto object-contain" />
-          <h2 className="text-xl font-black tracking-tighter uppercase font-display">NEVO</h2>
+          <img src="/images/nevo%20logo.jpeg" alt="NEVOO" className="h-10 w-auto object-contain" />
+          <h2 className="text-xl font-black tracking-tighter uppercase font-display">NEVOO</h2>
         </div>
         <p className="text-white/40 text-sm max-w-xs">
           Luxury grooming for the modern individual. Redefining the salon experience in Kano with timeless elegance.
@@ -126,7 +126,7 @@ const Footer: React.FC = () => (
       </div>
     </div>
     <div className="mt-12 pt-8 border-t border-white/5 text-center text-white/20 text-[10px] uppercase tracking-widest">
-      © 2024 NEVO Unisex Salon. Crafted for Excellence in Kano State.
+      © 2024 NEVOO Unisex Salon. Crafted for Excellence in Kano State.
     </div>
   </footer>
 );
