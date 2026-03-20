@@ -9,14 +9,14 @@ const About: React.FC = () => {
         <div className="w-full lg:w-1/2 aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative">
           <img 
             src="/images/shop.webp" 
-            alt="NEVOO Salon" 
+            alt="NEVOO unisex salon and barbershop in Kano" 
             className="w-full h-full object-cover"
           />
         </div>
         
         <div className="w-full lg:w-1/2 flex flex-col gap-8">
           <div className="flex flex-col gap-4">
-            <span className="text-primary font-bold tracking-[0.3em] text-xs uppercase">Premium Unisex Salon</span>
+            <span className="text-primary font-bold tracking-[0.3em] text-xs uppercase">Premium Unisex Salon &amp; Barbershop in Kano</span>
             <h1 className="text-5xl md:text-7xl font-black font-display uppercase leading-tight tracking-tighter">
               Elevating Elegance Beyond Gender
             </h1>
@@ -27,7 +27,7 @@ const About: React.FC = () => {
               NEVOO is more than a salon; it is a sanctuary of style. Born from a vision of premium unisex grooming, we blend timeless black-and-white aesthetics with contemporary techniques to redefine your personal brand.
             </p>
             <p>
-              Located in the heart of Kano State, we cater to the modern individual who values precision, luxury, and an unparalleled service experience.
+              As Kano&apos;s leading unisex salon and barbershop, we cater to the modern individual who values precision, luxury, and an unparalleled service experience. Located in the heart of Kano State.
             </p>
           </div>
 
