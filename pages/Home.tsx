@@ -23,7 +23,7 @@ const Home: React.FC = () => {
                 Elite Grooming <br/>Refined
               </h1>
               <p className="text-white/80 text-lg md:text-xl font-medium max-w-lg leading-relaxed font-sans">
-                A premium unisex salon in Kano State. Hair & grooming, braiding, manicure & pedicure, tattooing, and styling for men and women.
+                Your premium barbershop and unisex salon in Kano. Hair & grooming, braiding, manicure & pedicure, tattooing, and styling for men and women.
               </p>
               <div className="flex flex-wrap gap-4 mt-8">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex min-w-[200px] items-center justify-center gap-2 rounded-lg h-14 px-8 bg-white text-black hover:bg-slate-100 transition-all text-base font-extrabold tracking-wide">
