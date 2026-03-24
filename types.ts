@@ -4,6 +4,8 @@ export interface Service {
   name: string;
   category: string;
   description: string;
+  /** Extra crawlable copy mapping service pages to search keywords (shown on service detail). */
+  seoExpanded?: string;
   price?: string;
   priceValue?: number;
   popularity: number;
