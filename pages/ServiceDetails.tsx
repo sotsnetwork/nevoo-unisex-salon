@@ -127,7 +127,7 @@ const ServiceDetails: React.FC = () => {
         <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-white/5 group">
           <img 
             src={service.image || "/images/shop.webp"} 
-            alt={service.name}
+            alt={`${service.name} — NEVOO unisex salon Kano`}
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-60"></div>
@@ -163,8 +163,11 @@ const ServiceDetails: React.FC = () => {
 
           <div className="space-y-6 text-white/60 text-lg leading-relaxed">
             <p className="font-medium text-white/80">{service.description}</p>
+            {service.seoExpanded && (
+              <p className="text-white/65 text-base md:text-lg leading-relaxed">{service.seoExpanded}</p>
+            )}
             <p>
-              Experience the pinnacle of grooming at NEVOO. Our {service.name.toLowerCase()} service is meticulously designed to cater to your specific aesthetic goals while providing a moment of pure relaxation.
+              Experience the pinnacle of grooming at NEVOO. Our {service.name.toLowerCase()} service is designed for your goals—message us on WhatsApp for timing and custom requests.
             </p>
           </div>
 
@@ -331,7 +334,7 @@ const ServiceDetails: React.FC = () => {
                 <div className="aspect-video w-full rounded-2xl overflow-hidden relative">
                   <img 
                     src={related.image || "/images/shop.webp"} 
-                    alt={related.name}
+                    alt={`${related.name} — NEVOO salon Kano`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute top-4 left-4 p-2 rounded-lg bg-background-dark/80 backdrop-blur-md border border-white/10 text-primary">
