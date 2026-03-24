@@ -11,6 +11,7 @@ export const SERVICES: Service[] = [
     name: 'Classic Plaiting',
     category: 'UNISEX HAIRCUT, BRAIDING & STYLING',
     description: 'Intricate patterns and styles crafted with precision. Hair braiding for all.',
+    seoExpanded: 'Looking for a braiding salon in Kano or professional hair styling near you? NEVOO delivers precision plaiting for men and women. Ask our team about knotless braids, Ghana weaving, bridal hairstyles, and wig installation when you book.',
     popularity: 88,
     icon: 'waves',
     image: '/images/BRAIDING%204.jpeg'
@@ -20,6 +21,7 @@ export const SERVICES: Service[] = [
     name: 'Signature Dreadlocks',
     category: 'UNISEX HAIRCUT, BRAIDING & STYLING',
     description: 'Maintenance and restoration for a timeless look.',
+    seoExpanded: 'Expert dreadlocks styling and maintenance in Kano. Our professional hairstylists focus on healthy locs, neat retwists, and a polished finish—ideal if you searched for dreadlocks styling Kano or a trusted hair salon Kano.',
     popularity: 92,
     icon: 'texture',
     image: '/images/BRAIDING%203.png'
@@ -29,6 +31,7 @@ export const SERVICES: Service[] = [
     name: 'The Gentleman\'s Cut',
     category: 'UNISEX HAIRCUT, BRAIDING & STYLING',
     description: 'Precision fade with hot towel finish. Styling for men and women.',
+    seoExpanded: 'Haircut for men in Kano, female haircut salon options, and sharp barbing salon finishes—all in one premium barber shop. Perfect for searches like best salon in Kano Nigeria, hair salon Kano, or grooming salon near me when you want a luxury cut.',
     popularity: 98,
     icon: 'content_cut',
     image: '/images/hair%204.jpeg'
@@ -38,6 +41,7 @@ export const SERVICES: Service[] = [
     name: 'Hair Braiding',
     category: 'UNISEX HAIRCUT, BRAIDING & STYLING',
     description: 'Hair braiding for both male and female clients. Expert braiding for all hair types.',
+    seoExpanded: 'NEVOO is a leading unisex beauty salon in Nigeria for braids and protective styles. From box braids to cornrows, we are the braiding salon Kano clients trust. Message us for knotless braids, Ghana weaving, bridal hair, or photoshoot styling.',
     popularity: 90,
     icon: 'waves',
     image: '/images/BRAIDING%201.jpeg'
@@ -47,6 +51,7 @@ export const SERVICES: Service[] = [
     name: 'Sculpted Manicure',
     category: 'Manicure and Pedicure',
     description: 'Minimalist nail architecture and care for fingernails. For men and women.',
+    seoExpanded: 'Visit our nail salon in Kano for manicure and pedicure with a luxury spa-and-salon feel. Ask about gel nails, acrylic nails, and nail art. If you searched nail technician near me or beauty salon in Kano, book a session with NEVOO.',
     popularity: 75,
     icon: 'spa',
     image: '/images/nails%201.jpeg'
@@ -56,6 +61,7 @@ export const SERVICES: Service[] = [
     name: 'Luxury Pedicure',
     category: 'Manicure and Pedicure',
     description: 'Feet and toenail care. Deep hydration and relaxation therapy. For men and women.',
+    seoExpanded: 'Relaxation-focused pedicure in Kano—ideal if you want spa in Kano Nigeria energy with real nail care. Pair with our manicure for a full beauty salon in Kano experience. WhatsApp us for bridal prep or birthday glam add-ons.',
     popularity: 82,
     icon: 'footprint',
     image: '/images/nails%202.jpeg'
@@ -65,6 +71,7 @@ export const SERVICES: Service[] = [
     name: 'Custom Tattooing',
     category: 'Tattooing',
     description: 'Professional tattoo artistry. Consultations and custom designs for men and women.',
+    seoExpanded: 'Tattoo studio Kano clients choose for clean work and consultation-first service. Searching best tattoo artist Kano or body art studio Nigeria? Book through NEVOO for custom ink, cover-ups, and design guidance from our artists.',
     popularity: 85,
     icon: 'brush',
     image: '/images/tattoo%201.jpeg'
