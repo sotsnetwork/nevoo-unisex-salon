@@ -6,6 +6,9 @@
     { "source": "/services/:id", "destination": "/index.html" },
     { "source": "/gallery", "destination": "/index.html" },
     { "source": "/contact", "destination": "/index.html" },
-    { "source": "/booking-success", "destination": "/index.html" }
+    { "source": "/booking-success", "destination": "/index.html" },
+    { "source": "/location-airport-road-kano", "destination": "/index.html" },
+    { "source": "/luxury-grooming-kano", "destination": "/index.html" },
+    { "source": "/salon-guides", "destination": "/index.html" }
   ]
 }
