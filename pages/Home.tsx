@@ -60,6 +60,23 @@ const Home: React.FC = () => {
         ))}
       </section>
 
+      {/* Keyword-rich discoverability (visible, crawlable) */}
+      <section className="w-full max-w-[1200px] px-6 pb-16" aria-labelledby="seo-intro-heading">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-8 md:p-12">
+          <h2 id="seo-intro-heading" className="text-2xl md:text-3xl font-black font-display uppercase tracking-tight text-white mb-6">
+            Unisex salon in Kano &amp; premium barbershop
+          </h2>
+          <div className="space-y-4 text-white/55 text-sm md:text-base leading-relaxed max-w-3xl">
+            <p>
+              NEVOO is the <strong className="text-white/85">best salon in Kano Nigeria</strong> for clients who want one address for <strong className="text-white/85">hair salon Kano</strong>, <strong className="text-white/85">barbing salon Kano</strong>, <strong className="text-white/85">beauty salon in Kano</strong>, and <strong className="text-white/85">unisex beauty salon Nigeria</strong> level service. We combine <strong className="text-white/85">luxury salon in Kano</strong> atmosphere with <strong className="text-white/85">spa and salon</strong> nail care—ideal when you search <strong className="text-white/85">grooming salon near me</strong> and want Airport Road convenience.
+            </p>
+            <p>
+              Explore <Link to="/services" className="text-primary font-semibold hover:underline">service pages</Link> for haircuts, braiding, manicure &amp; pedicure, and tattoos; read <Link to="/salon-guides" className="text-primary font-semibold hover:underline">salon guides</Link>; see our <Link to="/location-airport-road-kano" className="text-primary font-semibold hover:underline">Airport Road location</Link>; or learn about <Link to="/luxury-grooming-kano" className="text-primary font-semibold hover:underline">luxury grooming at NEVOO</Link>.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action Bar */}
       <section className="w-full bg-primary/10 py-20 px-6">
         <div className="max-w-[800px] mx-auto text-center flex flex-col items-center gap-8">
