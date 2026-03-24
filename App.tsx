@@ -8,6 +8,9 @@ import Gallery from './pages/Gallery';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import BookingSuccess from './pages/BookingSuccess';
+import LocationKano from './pages/LocationKano';
+import LuxuryGrooming from './pages/LuxuryGrooming';
+import SalonInsights from './pages/SalonInsights';
 import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
 import FloatingContactButton from './components/FloatingContactButton';
 import { WHATSAPP_URL } from './constants';
@@ -113,6 +116,9 @@ const Footer: React.FC = () => (
           <Link to="/services" className="hover:text-primary transition-colors">Our Services</Link>
           <Link to="/gallery" className="hover:text-primary transition-colors">Style Portfolio</Link>
           <Link to="/contact" className="hover:text-primary transition-colors">Visit Us</Link>
+          <Link to="/location-airport-road-kano" className="hover:text-primary transition-colors">Salon near Airport Road</Link>
+          <Link to="/luxury-grooming-kano" className="hover:text-primary transition-colors">Luxury grooming</Link>
+          <Link to="/salon-guides" className="hover:text-primary transition-colors">Salon guides &amp; tips</Link>
         </div>
       </div>
       <div className="flex flex-col gap-6 items-center md:items-start">
@@ -151,6 +157,9 @@ const App: React.FC = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/booking-success" element={<BookingSuccess />} />
+            <Route path="/location-airport-road-kano" element={<LocationKano />} />
+            <Route path="/luxury-grooming-kano" element={<LuxuryGrooming />} />
+            <Route path="/salon-guides" element={<SalonInsights />} />
           </Routes>
         </main>
         <Footer />
