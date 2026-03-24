@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { SERVICES, WHATSAPP_URL } from '../constants';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const HAIR_CUT_SLIDESHOW = ['/images/hair%204.jpeg', '/images/hair%205.jpeg', '/images/BRAIDING%201.jpeg'];
 
@@ -39,7 +39,10 @@ const Services: React.FC = () => {
         <div className="text-center max-w-2xl mb-16">
           <span className="text-primary font-bold tracking-[0.3em] text-xs uppercase mb-4 block">Step 1: Choose Experience</span>
           <h1 className="text-4xl md:text-7xl font-black font-display uppercase tracking-tighter mb-4">The NEVOO Menu</h1>
-          <p className="text-white/50 text-lg">Hair & grooming, braiding, manicure & pedicure, tattooing, and styling for men and women. Select a category to explore our unisex salon services.</p>
+          <p className="text-white/50 text-lg">
+            Hair &amp; grooming, braiding, manicure &amp; pedicure, tattooing, and styling for men and women—your <strong className="text-white/70 font-semibold">hair salon Kano</strong>, <strong className="text-white/70 font-semibold">nail salon in Kano</strong>, <strong className="text-white/70 font-semibold">braiding salon Kano</strong>, and <strong className="text-white/70 font-semibold">tattoo studio Kano</strong> under one roof. Select a category to explore NEVOO services. Need tips first? See our{' '}
+            <Link to="/salon-guides" className="text-primary hover:underline">salon guides</Link>.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
