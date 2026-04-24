@@ -180,7 +180,7 @@ const ServiceDetails: React.FC = () => {
             <div className="relative z-10">
               <h3 className="text-white text-2xl font-black font-display uppercase tracking-tight mb-2">Instant Concierge</h3>
               <p className="text-white/50 text-sm leading-relaxed mb-8 max-w-xs">
-                The fastest way to secure your appointment. {service.category === 'Manicure and Pedicure' ? 'Our Nail Technicians' : service.category === 'Tattooing' ? 'Our tattoo artists' : 'Our stylists'} are online and ready to assist you now.
+                The fastest way to secure your appointment. {service.category === 'Manicure and Pedicure' ? 'Our Nail Technicians' : service.category === 'Tattooing' ? 'Our tattoo artists' : service.category === 'WELLNESS, SPA & AESTHETICS' ? 'Our wellness & spa team' : 'Our stylists'} are online and ready to assist you now.
               </p>
               
               <button 
