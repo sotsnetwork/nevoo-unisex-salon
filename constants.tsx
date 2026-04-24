@@ -149,4 +149,9 @@ export const GALLERY: GalleryItem[] = [
   { id: 'g18', title: 'Tattoo: Custom Artistry', description: 'Professional tattoo artistry.', category: 'Tattooing', imageUrl: '/images/tattoo%203.jpeg' },
   { id: 'g19', title: 'NEVOO Salon', description: 'Our premium unisex salon space.', category: 'Atmosphere', imageUrl: '/images/shop.webp' },
   { id: 'g20', title: 'NEVOO Brand', description: 'Unisex salon craftsmanship.', category: 'Atmosphere', imageUrl: '/images/nevo%20logo.jpeg' },
+  { id: 'g21', title: 'Wellness: ASMR Massage', description: 'Relaxing ASMR massage care at NEVOO.', category: 'WELLNESS, SPA & AESTHETICS', imageUrl: '/images/ASMR%20MASSAGE%20.jpeg' },
+  { id: 'g22', title: 'Wellness: Body Scrub', description: 'Body scrub and exfoliation for smooth, refreshed skin.', category: 'WELLNESS, SPA & AESTHETICS', imageUrl: '/images/Body%20scrub.jpeg' },
+  { id: 'g23', title: 'Wellness: Body Waxing', description: 'Professional body waxing service at NEVOO.', category: 'WELLNESS, SPA & AESTHETICS', imageUrl: '/images/Body%20waxing%20.jpeg' },
+  { id: 'g24', title: 'Wellness: Facial Spa', description: 'Facial spa treatment for a clean, glowing finish.', category: 'WELLNESS, SPA & AESTHETICS', imageUrl: '/images/Facials%20Spa.jpeg' },
+  { id: 'g25', title: 'Wellness: Teeth Whitening', description: 'Premium teeth whitening for a brighter smile.', category: 'WELLNESS, SPA & AESTHETICS', imageUrl: '/images/Premium%20teeth%20whitening.jpeg' },
 ];
