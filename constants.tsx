@@ -75,6 +75,56 @@ export const SERVICES: Service[] = [
     popularity: 85,
     icon: 'brush',
     image: '/images/tattoo%201.jpeg'
+  },
+  {
+    id: 's7',
+    name: 'ASMR Massages',
+    category: 'WELLNESS, SPA & AESTHETICS',
+    description: 'Sensory-focused massage for deep relaxation. Calming touch and rhythm for male and female clients.',
+    seoExpanded: 'Full-body massage in Kano with an ASMR-inspired, relaxation-first approach. Ideal if you searched spa in Kano Nigeria, body massage Kano, or relaxation spa Kano—book a session for stress relief and premium care.',
+    popularity: 86,
+    icon: 'self_improvement',
+    image: '/images/ASMR%20MASSAGE%20.jpeg'
+  },
+  {
+    id: 's8',
+    name: 'Facials',
+    category: 'WELLNESS, SPA & AESTHETICS',
+    description: 'Skin-focused facial treatments tailored to your skin type. Unisex; men and women welcome.',
+    seoExpanded: 'Facial treatment Kano clients trust for a clear, refreshed complexion. As part of our luxury spa experience Kano menu, we combine consultation with gentle, effective protocols.',
+    popularity: 84,
+    icon: 'face_3',
+    image: '/images/Facials%20Spa.jpeg'
+  },
+  {
+    id: 's9',
+    name: 'Body Scrub',
+    category: 'WELLNESS, SPA & AESTHETICS',
+    description: 'Exfoliation and renewal for smooth, healthy-looking skin. Available for all genders.',
+    seoExpanded: 'Body scrub services for glow and even texture—pair with our massage or facial for a full spa and salon Kano day. Unisex; ask about add-ons on WhatsApp.',
+    popularity: 80,
+    icon: 'shower',
+    image: '/images/Body%20scrub.jpeg'
+  },
+  {
+    id: 's10',
+    name: 'Body Waxing',
+    category: 'WELLNESS, SPA & AESTHETICS',
+    description: 'Professional waxing for face and body. Discreet, hygienic, and comfortable for men and women.',
+    seoExpanded: 'Body waxing in Kano with attention to comfort and aftercare. Beauty salon in Kano standards for hair removal; message us for areas and prep.',
+    popularity: 83,
+    icon: 'content_cut',
+    image: '/images/Body%20waxing%20.jpeg'
+  },
+  {
+    id: 's11',
+    name: 'Teeth Whitening',
+    category: 'WELLNESS, SPA & AESTHETICS',
+    description: 'Brighter smile treatments with care for sensitivity. For male and female clients.',
+    seoExpanded: 'Teeth whitening as part of NEVOO grooming—ideal before events or photoshoots. Book alongside facial or body services for a full refresh.',
+    popularity: 81,
+    icon: 'dentistry',
+    image: '/images/Premium%20teeth%20whitening.jpeg'
   }
 ];
 
