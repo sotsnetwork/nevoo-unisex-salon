@@ -103,7 +103,7 @@ const SalonInsights: React.FC = () => {
           <section>
             <h2 className="text-2xl md:text-3xl font-black font-display text-white mb-4">Spa, massage &amp; facial services</h2>
             <p>
-              NEVOO&apos;s core menu is hair, braids, nails, and tattoos with a luxury salon atmosphere. For <strong className="text-white/80">facial treatment Kano</strong>, <strong className="text-white/80">body massage Kano</strong>, or full <strong className="text-white/80">relaxation spa Kano</strong> requests, ask on WhatsApp—we will tell you what we can coordinate or recommend.
+              NEVOO now offers <strong className="text-white/80">WELLNESS, SPA &amp; AESTHETICS</strong> for all genders: <Link to="/services/s7" className="text-primary hover:underline">ASMR Massages</Link>, <Link to="/services/s8" className="text-primary hover:underline">Facials</Link>, <Link to="/services/s9" className="text-primary hover:underline">Body Scrub</Link>, <Link to="/services/s10" className="text-primary hover:underline">Body Waxing</Link>, and <Link to="/services/s11" className="text-primary hover:underline">Teeth Whitening</Link>. For <strong className="text-white/80">facial treatment Kano</strong>, <strong className="text-white/80">body massage Kano</strong>, and <strong className="text-white/80">relaxation spa Kano</strong> searches—book on WhatsApp or open each service to learn more.
             </p>
           </section>
         </article>
