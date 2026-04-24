@@ -23,6 +23,7 @@ const Services: React.FC = () => {
   const categoryImages: Record<string, string> = {
     'Manicure and Pedicure': '/images/nails%201.jpeg',
     'Tattooing': '/images/tattoo%203.jpeg',
+    'WELLNESS, SPA & AESTHETICS': '/images/wellness-spa-category.jpg',
   };
 
   const processedServices = useMemo(() => {
@@ -40,7 +41,7 @@ const Services: React.FC = () => {
           <span className="text-primary font-bold tracking-[0.3em] text-xs uppercase mb-4 block">Step 1: Choose Experience</span>
           <h1 className="text-4xl md:text-7xl font-black font-display uppercase tracking-tighter mb-4">The NEVOO Menu</h1>
           <p className="text-white/50 text-lg">
-            Hair &amp; grooming, braiding, manicure &amp; pedicure, tattooing, and styling for men and women—your <strong className="text-white/70 font-semibold">hair salon Kano</strong>, <strong className="text-white/70 font-semibold">nail salon in Kano</strong>, <strong className="text-white/70 font-semibold">braiding salon Kano</strong>, and <strong className="text-white/70 font-semibold">tattoo studio Kano</strong> under one roof. Select a category to explore NEVOO services. Need tips first? See our{' '}
+            Hair &amp; grooming, braiding, nails, tattoos, and <strong className="text-white/70 font-semibold">wellness &amp; spa</strong> (massage, facials, body scrub, waxing, teeth whitening) for men and women—your <strong className="text-white/70 font-semibold">hair salon Kano</strong>, <strong className="text-white/70 font-semibold">nail salon in Kano</strong>, <strong className="text-white/70 font-semibold">braiding salon Kano</strong>, <strong className="text-white/70 font-semibold">tattoo studio Kano</strong>, and <strong className="text-white/70 font-semibold">spa in Kano Nigeria</strong> under one roof. Select a category. Need tips? See our{' '}
             <Link to="/salon-guides" className="text-primary hover:underline">salon guides</Link>.
           </p>
         </div>
