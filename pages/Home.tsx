@@ -23,7 +23,7 @@ const Home: React.FC = () => {
                 Elite Grooming <br/>Refined
               </h1>
               <p className="text-white/80 text-lg md:text-xl font-medium max-w-lg leading-relaxed font-sans">
-                Your premium barbershop and unisex salon in Kano. Hair & grooming, braiding, manicure & pedicure, tattooing, and styling for men and women.
+                Your premium barbershop and unisex salon in Kano. Hair &amp; grooming, braids, nails, tattoos, plus wellness—ASMR massage, facials, body scrub, waxing, and teeth whitening for men and women.
               </p>
               <div className="flex flex-wrap gap-4 mt-8">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex min-w-[200px] items-center justify-center gap-2 rounded-lg h-14 px-8 bg-white text-black hover:bg-slate-100 transition-all text-base font-extrabold tracking-wide">
@@ -43,11 +43,12 @@ const Home: React.FC = () => {
       </section>
 
       {/* Feature Teasers */}
-      <section className="w-full max-w-[1200px] px-6 pb-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="w-full max-w-[1200px] px-6 pb-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {[
           { icon: 'content_cut', title: 'UNISEX HAIRCUT, BRAIDING & STYLING', desc: 'Precision cuts, braiding, and styling for men and women.' },
           { icon: 'spa', title: 'Manicure & Pedicure', desc: 'Fingernail care and feet/toenail treatments for everyone.' },
-          { icon: 'brush', title: 'Tattooing', desc: 'Professional tattoo artistry and custom designs.' }
+          { icon: 'brush', title: 'Tattooing', desc: 'Professional tattoo artistry and custom designs.' },
+          { icon: 'self_improvement', title: 'WELLNESS, SPA & AESTHETICS', desc: 'ASMR massage, facials, body scrub, waxing, and teeth whitening—unisex care.' }
         ].map((feature, idx) => (
           <div 
             key={idx}
@@ -71,7 +72,7 @@ const Home: React.FC = () => {
               NEVOO is the <strong className="text-white/85">best salon in Kano Nigeria</strong> for clients who want one address for <strong className="text-white/85">hair salon Kano</strong>, <strong className="text-white/85">barbing salon Kano</strong>, <strong className="text-white/85">beauty salon in Kano</strong>, and <strong className="text-white/85">unisex beauty salon Nigeria</strong> level service. We combine <strong className="text-white/85">luxury salon in Kano</strong> atmosphere with <strong className="text-white/85">spa and salon</strong> nail care—ideal when you search <strong className="text-white/85">grooming salon near me</strong> and want Airport Road convenience.
             </p>
             <p>
-              Explore <Link to="/services" className="text-primary font-semibold hover:underline">service pages</Link> for haircuts, braiding, manicure &amp; pedicure, and tattoos; read <Link to="/salon-guides" className="text-primary font-semibold hover:underline">salon guides</Link>; see our <Link to="/location-airport-road-kano" className="text-primary font-semibold hover:underline">Airport Road location</Link>; or learn about <Link to="/luxury-grooming-kano" className="text-primary font-semibold hover:underline">luxury grooming at NEVOO</Link>.
+              Explore <Link to="/services" className="text-primary font-semibold hover:underline">service pages</Link> for haircuts, braiding, manicure &amp; pedicure, tattoos, and <Link to="/services" className="text-primary font-semibold hover:underline">wellness &amp; spa</Link> (massage, facials, scrub, waxing, teeth whitening); read <Link to="/salon-guides" className="text-primary font-semibold hover:underline">salon guides</Link>; see our <Link to="/location-airport-road-kano" className="text-primary font-semibold hover:underline">Airport Road location</Link>; or learn about <Link to="/luxury-grooming-kano" className="text-primary font-semibold hover:underline">luxury grooming at NEVOO</Link>.
             </p>
           </div>
         </div>
